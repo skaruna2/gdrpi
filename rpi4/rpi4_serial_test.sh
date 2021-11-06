@@ -1,7 +1,7 @@
+# run with arg1 == clean to suppress menu and command prompt
 s=/dev/ttyGS0 # serial port
 f=0 # initial file index
 
-echo -en "\n\nWelcome to rpi4_serial_test!\n\n" > $s
 
 function help_menu() {
     echo "help      - show this help menu" > $s
@@ -10,18 +10,24 @@ function help_menu() {
     echo "diskspace - system disk space usage" > $s
     echo "filesend  - save input to a file" > $s
     echo "filerecv  - receive conents of a previously sent file" > $s
+    echo "sysinfo   - system information from landscape-sysinfo" > $s
     echo "uptime    - system uptime" > $s
 }
 function cmd_prompt() {
     command echo -en "\nEnter command: " > $s
 }
 
-help_menu
-cmd_prompt
+if [[ $1 != "clean" ]]; then
+    echo -en "\n\nWelcome to rpi4_serial_test!\n\n" > $s
+    help_menu
+    cmd_prompt
+fi
 
 while read c < $s; do
   if [ "$c" == "help" ]; then
     help_menu
+  elif   [ "$c" == "sysinfo" ]; then
+    landscape-sysinfo > $s
   elif   [ "$c" == "diskspace" ]; then
     df -H > $s
   elif [ "$c" == "cpuinfo" ]; then
@@ -57,12 +63,12 @@ while read c < $s; do
     else 
         echo "Invalid file index" > $s
     fi
-  #elif [ "$c" == "\r" ]; then
-  #  echo # discard new lines
   else
-    #echo "Invalid command" > $s
+    # ignore invalid commands
     echo -en "\n\r" > $s
   fi
-  cmd_prompt
+  if [[ $1 != "clean" ]] ; then
+    cmd_prompt
+  fi
 done
 
