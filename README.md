@@ -68,9 +68,9 @@ sudo chmod a+rw /dev/ttyACM0
 ```
 ## Additional Resources
 
-https://svelte.dev/tutorial/basics
-https://www.rust-lang.org/what/wasm
-https://rustwasm.github.io/docs/book/
-https://github.com/bytecodealliance/wasmtime
-https://wasmer.io/wasmer-vs-wasmtime
-https://www.toptal.com/webassembly/webassembly-rust-tutorial-web-audio
+https://svelte.dev/tutorial/basics \
+https://www.rust-lang.org/what/wasm \
+https://rustwasm.github.io/docs/book/ \
+https://github.com/bytecodealliance/wasmtime \
+https://wasmer.io/wasmer-vs-wasmtime \
+https://www.toptal.com/webassembly/webassembly-rust-tutorial-web-audio \
