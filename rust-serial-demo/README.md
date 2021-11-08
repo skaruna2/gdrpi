@@ -44,16 +44,15 @@ cargo run --example receive_data_flush /dev/ttyGS0 9600
 cargo run --example transmit /dev/ttyACM0 9600 --string "hello "
 ```
 
-## Issue commands to rpi4_serial_test.sh script
+## Issue commands to rpi4_serial_test.sh script (parent directory)
 ```
 # on rpi4
-cd rpi4
 chmod +x rpi4_serial_test.sh
 ./rpi4_serial_test.sh clean
 ```
 ```
 # on host device
-cd rpi4/rust-serial-demo
+cd rust-serial-demo
 cargo run --example command /dev/ttyACM0 9600 --string help
 cargo run --example command /dev/ttyACM0 9600 --string uptime
 cargo run --example command /dev/ttyACM0 9600 --string cputemp
