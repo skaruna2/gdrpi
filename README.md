@@ -4,8 +4,7 @@
 ## Raspberry Pi Setup
 
 ### Download Ubuntu Linux
-https://ubuntu.com/download/raspberry-pi
-Ubuntu Server 20.04.3 LTS - 64-bit
+Ubuntu Server 20.04.3 LTS - 64-bit: https://ubuntu.com/download/raspberry-pi \
 Direct download link: https://ubuntu.com/download/raspberry-pi/thank-you?version=20.04.3&architecture=server-arm64+raspi
 
 ### Install Ubuntu on the SD card, setup network and connect with SSH
