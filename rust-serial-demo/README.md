@@ -16,8 +16,12 @@ It transmits a command and receives the response.
 
 ### On rpi4 and host
 ```
-sudo apt get pkg-config
-sudo apt get libudev-dev
+# Install Rust if not already installed
+sudo apt -y get curl
+curl https://sh.rustup.rs -sSf | sh
+rustup override set nightly
+sudo apt -y get pkg-config
+sudo apt -y get libudev-dev
 # on rpi4
 sudo chmod a+rw /dev/ttyGS0 
 # on host device
