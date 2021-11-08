@@ -12,12 +12,12 @@ Direct download link: https://ubuntu.com/download/raspberry-pi/thank-you?version
 https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#1-overview
 
 ### Enable Gadget Serial
-Within the Raspberry Pi 4, edit these files:
-Edit /boot/firmware/config.txt  
-Add a new line at the end of the file which contains: 
+- Within the Raspberry Pi 4, edit these files:
+- Edit /boot/firmware/config.txt  
+- Add a new line at the end of the file which contains: 
 ```dtoverlay=dwc```
-Edit /boot/firmware/cmdline.txt  
-Append ``` modules-load=dwc2,g_serial``` to the end of the line. Place a space before ```modules```.
+- Edit /boot/firmware/cmdline.txt  
+- Append ``` modules-load=dwc2,g_serial``` to the end of the line. Place a space before ```modules```.
 
 To utilze the Gadget Serial port, connect a USB cable from your computer to the RPI4 USB-C port. It works with USB-C to USB-C or USB-A to USB-C. The important part is to connect to the USB-C port of the RPI4. Meantime, you should still maintain a connection to the RPI4 using a network cable or WiFi
 
