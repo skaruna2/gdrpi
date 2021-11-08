@@ -1,0 +1,13 @@
+[package]
+name = "rust-wasm-test"
+version = "0.1.0"
+edition = "2021"
+authors = ["Hunter Kreie <hkreie@asu.edu"]
+description = "A sample project with wasm-pack"
+repository = "https://github.com/skaruna2/gdrpi"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = "0.2"
