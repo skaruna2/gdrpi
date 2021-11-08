@@ -109,7 +109,11 @@ fn main() {
             }
             loop {
                 match port.read(serial_buf.as_mut_slice()) {
-                    Ok(t) => { io::stdout().write_all(&serial_buf[..t]).unwrap(); io::stdout().flush().unwrap(); },
+                    Ok(t) => { 
+                        io::stdout().write_all(&serial_buf[..t]).unwrap(); 
+                        io::stdout().flush().unwrap(); 
+                        //if String::from_utf8(serial_buf).find("\n\n\n") { break }
+                    },
                     Err(ref e) if e.kind() == io::ErrorKind::TimedOut => (),
                     Err(e) => eprintln!("{:?}", e),
                 }
