@@ -34,7 +34,7 @@ sudo echo "Test from host computer" > /dev/ttyACM0
 ```
 You should see the message appear in the RPI4 terminal.
 
-## Serial Console
+## Basic Serial Console
 On the RPI4: 
 ```
 systemctl enable serial-getty@ttyGS0.service
@@ -44,8 +44,29 @@ From the connected computer:
 ```
 sudo screen /dev/ttyACM0 9600
 ```
-This will launch a terminal and prompt a login just as if you connected with SSH. 
+This will launch a terminal and prompt a login just as if you connected with SSH.
 
+Disable the serial console before implementing the code in this repository
+```
+systemctl stop serial-getty@ttyGS0.service
+systemctl disable serial-getty@ttyGS0.service
+```
+
+## Code in this Repository
+- rpi4_serial_test.sh - Runs on the RPI4 and responds to selected command inputs, demonstrates simple file transfer capability, used for testing additional modules
+- rust-serial-demo - Examples can be run on target RPI4 and connecting devices. Use to test serial communication implemented by Rust programming language.
+- rust-wasm-test - A basic Web Assembly example which will be used as a framework for issuing commands such as those in rpi4_serial_test.sh
+- PrometheousMetrics - Implementation of Prometheous monitoring system on RPI4
+- FrontEnd-Login - Basic Svelte Login page implemented with Svelte
+
+## Additional Configuration
+To access the ports as a non-root user: 
+```
+# On the RPI4: 
+sudo chmod a+rw /dev/ttyGS0
+# On the connecting host:
+sudo chmod a+rw /dev/ttyACM0
+```
 ## Additional Resources
 
 https://svelte.dev/tutorial/basics
