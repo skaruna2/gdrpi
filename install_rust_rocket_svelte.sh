@@ -16,3 +16,9 @@ echo "Set rust auto-updates"
 rustup default nightly-2021-10-05
 cd rust-rocket-svelte
 npm install
+
+# Run npm and cargo in separate terminals
+# Terminal 1: 
+npm run dev  
+# Terminal 2: 
+cargo run
