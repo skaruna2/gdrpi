@@ -21,6 +21,7 @@ npm i -D @smui/data-table
 npm i -D @smui/tab
 npm i -D @smui/tab-bar
 npm i svelte-material-icons
+npm i rollup-plugin-svelte@6.1.1
 
 # Run npm and cargo in separate terminals
 # Terminal 1: 
