@@ -16,6 +16,11 @@ echo "Set rust auto-updates"
 rustup default nightly-2021-10-05
 cd rust-rocket-svelte
 npm install
+npm i svelte-material-ui
+npm i -D @smui/data-table
+npm i -D @smui/tab
+npm i -D @smui/tab-bar
+npm i svelte-material-icons
 
 # Run npm and cargo in separate terminals
 # Terminal 1: 
