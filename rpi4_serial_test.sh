@@ -1,7 +1,11 @@
+# On the RPI4: 
+# $ sudo ./rpi4_serial_test
+# One the host device:
+# $ sudo screen /dev/ttyACM0 9600
 # run with arg1 == clean to suppress menu and command prompt
+
 s=/dev/ttyGS0 # serial port
 f=0 # initial file index
-
 
 function help_menu() {
     echo "help      - show this help menu" > $s
