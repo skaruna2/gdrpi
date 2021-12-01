@@ -12,8 +12,8 @@ git clone https://github.com/joemooney/rust-rocket-svelte
 echo "Add rust to env"
 source $HOME/.cargo/env
 echo "Set rust auto-updates"
-#rustup override set nightly
-rustup default nightly-2021-10-05
+rustup override set nightly
+#rustup default nightly-2021-10-05
 cd rust-rocket-svelte
 npm install
 npm i svelte-material-ui
