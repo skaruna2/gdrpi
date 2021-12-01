@@ -1,5 +1,5 @@
 # On the RPI4: 
-# $ sudo ./rpi4_serial_test
+# $ sudo ./rpi4_serial_test.sh
 # One the host device:
 # $ sudo screen /dev/ttyACM0 9600
 # run with arg1 == clean to suppress menu and command prompt
