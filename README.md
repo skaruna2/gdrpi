@@ -1,4 +1,4 @@
-# Arizona State University CSE 485/423 Capstone Project FA2021-SP2022
+# Arizona State University CS/CSE Capstone Project FA2021-SP2022
 # General Dynamics - Use of Raspberry Pi for Network Configuration
 
 ## Raspberry Pi Setup
