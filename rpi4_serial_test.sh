@@ -14,8 +14,13 @@ function help_menu() {
     echo "diskspace - system disk space usage" > $s
     echo "filesend  - save input to a file" > $s
     echo "filerecv  - receive conents of a previously sent file" > $s
+    echo "perf      - results from systemd-analyze" > $s
+    echo "reboot    - reboots the device" > $s
     echo "sysinfo   - system information from landscape-sysinfo" > $s
+    echo "syslog    - reports recent syslog commands" > $s
+    echo "top       - process info from top" > $s
     echo "uptime    - system uptime" > $s
+
 }
 function cmd_prompt() {
     command echo -en "\nEnter command: " > $s
@@ -30,6 +35,14 @@ fi
 while read c < $s; do
   if [ "$c" == "help" ]; then
     help_menu
+  elif   [ "$c" == "perf" ]; then
+    systemd-analyze > $s
+  elif   [ "$c" == "reboot" ]; then
+    reboot > $s
+  elif   [ "$c" == "syslog" ]; then
+    tail /var/log/syslog > $s
+  elif   [ "$c" == "top" ]; then
+    top -b -n 1 > $s
   elif   [ "$c" == "sysinfo" ]; then
     landscape-sysinfo > $s
   elif   [ "$c" == "diskspace" ]; then
