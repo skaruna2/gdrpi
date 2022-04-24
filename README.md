@@ -52,9 +52,9 @@ systemctl disable serial-getty@ttyGS0.service
 ```
 
 ## Code in this Repository
-- rpi4_serial_test.sh - Runs on the RPI4 and responds to selected command inputs, demonstrates simple file transfer capability, used for testing additional modules
+- rpi4_serial_command_interpreter.sh - Runs on the serial-connected RPI4 and responds to commands issued over serial channel.
 - rust-serial-demo - Examples can be run on target RPI4 and connecting devices. Use to test serial communication implemented by Rust programming language.
-- rust-wasm-test - A basic Web Assembly example which will be used as a framework for issuing commands such as those in rpi4_serial_test.sh
+- rust-wasm-test - A basic Web Assembly example which will be used as a framework for issuing commands such as those in rpi4_serial_command_interpreter.sh
 - PrometheousMetrics - Implementation of Prometheous monitoring system on RPI4
 - FrontEnd-Login - Basic Svelte Login page implemented with Svelte
 
