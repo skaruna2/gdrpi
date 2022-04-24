@@ -22,6 +22,19 @@ To utilze the Gadget Serial port, connect a USB cable from your computer to the 
 
 Reboot the RPI4 and reconnect using SSH
 
+## Serial Command Interpreter
+
+```
+./rpi4_serial_command_interpreter.sh
+```
+
+## rust-rocket-svelte submodule
+The rust-rocket-svelte app should run on the touchscreen RPI system.
+https://github.com/hkreie/rust-rocket-svelte
+```
+git submodule init
+```
+
 ## Basic Testing
 On the RPI4:
 ```
