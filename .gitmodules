@@ -1,0 +1,3 @@
+[submodule "rust-rocket-svelte"]
+	path = rust-rocket-svelte
+	url = git@github.com:hkreie/rust-rocket-svelte.git
